@@ -66,7 +66,6 @@ export const getStaticProps: GetStaticProps = async ({ params, locale, draftMode
     }
 
     return {
-      revalidate: revalidateDuration,
       props: {
         ...(await getServerSideTranslations(locale)),
         previewActive: !!preview,

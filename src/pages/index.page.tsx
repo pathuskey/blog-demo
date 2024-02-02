@@ -62,6 +62,7 @@ export const getStaticProps: GetStaticProps = async ({ locale, draftMode: previe
     const posts = blogPostsData.pageBlogPostCollection?.items;
 
     if (!page) {
+      console.log('no home page');
       return {
         revalidate: revalidateDuration,
         notFound: true,
@@ -69,7 +70,6 @@ export const getStaticProps: GetStaticProps = async ({ locale, draftMode: previe
     }
 
     return {
-      revalidate: revalidateDuration,
       props: {
         previewActive: !!preview,
         ...(await getServerSideTranslations(locale)),
@@ -77,7 +77,8 @@ export const getStaticProps: GetStaticProps = async ({ locale, draftMode: previe
         posts,
       },
     };
-  } catch {
+  } catch (err) {
+    console.error(err);
     return {
       revalidate: revalidateDuration,
       notFound: true,
