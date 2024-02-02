@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+export default async (req, res) => {
   const url = req.body.url;
 
   try {
@@ -10,4 +10,4 @@ export default async function handler(req, res) {
     // the last successfully generated page
     return res.status(500).send('Error revalidating');
   }
-}
+};
