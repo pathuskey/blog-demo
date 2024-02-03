@@ -29,12 +29,13 @@
   "dependencies": {
     "@contentful/f36-icons": "^4.23.2",
     "@contentful/f36-tokens": "^4.0.1",
-    "@contentful/rich-text-react-renderer": "^15.16.2",
     "@contentful/live-preview": "^2.11.1",
+    "@contentful/rich-text-react-renderer": "^15.16.2",
     "@next/bundle-analyzer": "^13.0.4",
+    "aws-amplify": "^6.0.13",
     "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
-    "next": "^13.4.1",
+    "next": "^14.1.0",
     "next-compose-plugins": "^2.2.1",
     "next-i18next": "^12.1.0",
     "next-pwa": "^5.6.0",
@@ -46,6 +47,8 @@
     "sharp": "^0.31.3"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^0.10.3",
+    "@aws-amplify/backend-cli": "^0.10.0",
     "@babel/eslint-parser": "^7.19.1",
     "@contentful/rich-text-types": "^16.0.2",
     "@graphql-codegen/cli": "2.13.12",
@@ -56,9 +59,12 @@
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.32.0",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
     "autoprefixer": "^10.4.13",
+    "aws-cdk": "^2.126.0",
+    "aws-cdk-lib": "^2.126.0",
+    "constructs": "^10.3.0",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.1",
     "eslint-config-prettier": "^8.3.0",
@@ -76,7 +82,6 @@
     "prettier-plugin-tailwindcss": "^0.2.1",
     "tailwind-merge": "^1.8.0",
     "tailwindcss": "^3.2.4",
-    "typescript": "4.9.3",
-    "typescript-graphql-request": "^4.4.6"
+    "typescript": "^5.3.3"
   }
 }
