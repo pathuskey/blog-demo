@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
 
   try {
     // Revalidate the URLs for those documents
-    revalidatePath(path);
+    revalidatePath(path, 'page');
     return NextResponse.json({ revalidated: true });
   } catch (err) {
     return NextResponse.json({ message: err }, { status: 500 });
