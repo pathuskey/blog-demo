@@ -1,8 +1,8 @@
-// const dotenv = require('dotenv').config();
+const dotenv = require('dotenv').config();
 const nextComposePlugins = require('next-compose-plugins');
 
-// const headers = require('./config/headers');
-// const plugins = require('./config/plugins');
+const headers = require('./config/headers');
+const plugins = require('./config/plugins');
 //const { i18n } = require('./next-i18next.config.js');
 
 /**
@@ -14,7 +14,7 @@ const { withPlugins } = nextComposePlugins.extend(() => ({}));
  * Next config
  * documentation: https://nextjs.org/docs/api-reference/next.config.js/introduction
  */
-module.exports = withPlugins({
+module.exports = withPlugins(plugins, {
   /**
    * add the environment variables you would like exposed to the client here
    * documentation: https://nextjs.org/docs/api-reference/next.config.js/environment-variables
