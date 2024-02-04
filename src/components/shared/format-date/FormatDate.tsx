@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router';
-
 interface FormatDateProps {
   date: number | Date | undefined;
   locale?: string;
@@ -14,9 +12,5 @@ export const formatDateFunc = ({ date, locale }: FormatDateProps) => {
 };
 
 export const FormatDate = (props: FormatDateProps) => {
-  const { locale: localeFromRouter } = useRouter();
-
-  if (!localeFromRouter) return null;
-
-  return <>{formatDateFunc({ ...props, locale: localeFromRouter })}</>;
+  return <>{formatDateFunc({ ...props })}</>;
 };
