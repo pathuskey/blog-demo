@@ -10,8 +10,12 @@ export async function GET(req: NextRequest) {
 
   try {
     // Revalidate the URLs for those documents
-    revalidatePath(path, 'page');
-    return NextResponse.json({ revalidated: true });
+    revalidatePath(path);
+    return NextResponse.json({
+    revalidated: true,
+    now: Date.now(),
+    cache: 'no-store',
+  });
   } catch (err) {
     return NextResponse.json({ message: err }, { status: 500 });
   }
